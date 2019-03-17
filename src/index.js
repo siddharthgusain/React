@@ -1,12 +1,27 @@
 import React from 'react';
+
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-<App />, 
-document.getElementById('root')
-);
+const App = ()=>{
+    return (
+        <div className="ui container comments">
+            <div className="comment">
+                <a href="/" className="avatar">
+                    <img alt="avatar"/>
+                </a>
+                <div className="content">
+                <a href="/" className="author">
+                    SID
+                </a>
+                <div className="metadata">
+                    <span className="date">Today at 6:00PM</span>
+                </div>
+                <div className="text">Nice Blog post</div>
+                </div>    
+            </div>
+        </div>
+    );
+};
 
-serviceWorker.unregister();
+
+ReactDOM.render(<App/>,document.getElementById("root"));
